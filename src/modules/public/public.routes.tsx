@@ -1,14 +1,17 @@
 const ROUTES = {
 	HOME: "/",
-	ABOUT: "#about",
-	PRICING: "#pricing",
+	PRODUCT: "#product",
+	FEATURES: "#features",
+
+	CONTACT: "contact",
+	COMPANY: "company",
+
 	FAQS: "#faqs",
 	TERMS: "/terms_and_condition",
-	PRIVACY: "/privacy",
+	ABOUT: "about",
 	CREATE_ACCOUNT: "/register_organisation",
 	LOGIN: "/login",
 	GET_STARTED: "/login",
-	REQUEST_DEMO: "/login",
 	FORGET_PASSWORD: "/forget_password",
 };
 

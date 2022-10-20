@@ -1,21 +1,26 @@
-import { Link } from "react-router-dom";
+import ROUTES from "../public.routes";
 
 const Nav = () => {
+	const navigation = [
+		{ name: "Products", href: ROUTES.PRODUCT },
+		{ name: "Features", href: ROUTES.FEATURES },
+		{ name: "Contact", href: ROUTES.CONTACT },
+		{ name: "Company", href: ROUTES.COMPANY },
+	];
 	return (
 		<section className="w-screen ">
-			<nav className=" w-full mx-auto flex flex-row py-2  bg-purple-600">
-				<img src="/vite.svg" alt="" className="w-14 h-14 mx-4 ml-8" />
-				<div className="mx-auto m-0  flex items-center flex-row flex-2/3">
-					<Link to={"#"} className="mx-auto px-7 py-4 space-x-1.5 text-white font-light text-lg ">
-						Home
-					</Link>
-					<Link to={"#"} className="mx-auto px-7 py-4 space-x-1.5 text-white font-light text-lg ">
-						Products
-					</Link>
-					<Link to={"#"} className="mx-auto px-7 py-4 space-x-1.5 text-white font-light text-lg  ">
-						contact
-					</Link>
-				</div>
+			<nav className="w-full z-10 fixed top-0   flex flex-row py-3 items-center bg-blue-200 bg-gradient-to-r from-white shadow-md te">
+				<a href={ROUTES.HOME} className="mx-6 my-3 items-center">
+					<img alt=" Company Logo" className="h-8 w-auto sm:h-10" src="/vite.svg" />
+				</a>
+
+				<ul className="mx-8 py-3 hidden md:flex flex-row">
+					{navigation.map((item, i) => (
+						<a className="mx-1 px-6 tex-center text-blue-600 text-lg" href={`${item.href}`} key={i}>
+							{item.name}
+						</a>
+					))}
+				</ul>
 			</nav>
 		</section>
 	);
