@@ -1,11 +1,12 @@
 const ROUTES = {
 	HOME: "/",
-	PRODUCT: "#product",
+	SERVICE: "#service",
 	FEATURES: "#features",
 
 	CONTACT: "contact",
 	COMPANY: "company",
 
+	PRODUCT: "#product",
 	FAQS: "#faqs",
 	TERMS: "/terms_and_condition",
 	ABOUT: "about",
